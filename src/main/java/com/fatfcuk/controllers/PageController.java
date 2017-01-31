@@ -12,22 +12,7 @@ public class PageController {
 
     @RequestMapping("/")
     String home() {
-        return "app.home";
-    }
-
-    @RequestMapping("/tutorials")
-    String tutorials() {
-        return "app.tutorials";
-    }
-
-    @RequestMapping("/board")
-    String board() {
-        return "app.board";
-    }
-
-    @RequestMapping("/contact")
-    String contact() {
-        return "app.contact";
+        return "app.blog";
     }
 
     @RequestMapping("/about")
@@ -35,12 +20,18 @@ public class PageController {
         return "app.about";
     }
 
-    @RequestMapping("/login")
-    String login() {
-        return "app.login";
+    @RequestMapping("/contact")
+    String contact() {
+        return "app.contact";
     }
 
+    @RequestMapping("/forum")
+    String forum() {
+        return "app.forum";
+    }
 
-
-
+    @RequestMapping("/tutorials")
+    String tutorials() {
+        return "app.tutorials";
+    }
 }

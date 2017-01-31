@@ -8,12 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-public class PageController {
+public class StaticPagesController {
 
-    @RequestMapping("/")
-    String home() {
-        return "app.blog";
-    }
+
 
     @RequestMapping("/about")
     String about() {
@@ -25,13 +22,7 @@ public class PageController {
         return "app.contact";
     }
 
-    @RequestMapping("/forum")
-    String forum() {
-        return "app.forum";
-    }
 
-    @RequestMapping("/tutorials")
-    String tutorials() {
-        return "app.tutorials";
-    }
+
+
 }

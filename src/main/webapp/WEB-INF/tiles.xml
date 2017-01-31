@@ -6,15 +6,16 @@
 
 <tiles-definitions>
     <definition name="app.default" template="/WEB-INF/layouts/default.jsp">
-        <put-attribute name="title" value="fatfcuk.com Java tips and tricks"/>
+        <put-attribute name="title" value="Java and testing tutorials."/>
         <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"/>
     </definition>
 
-
-
-
     <definition name="app.blog" extends="app.default">
         <put-attribute name="content" value="/WEB-INF/tiles/blog.jsp"/>
+    </definition>
+
+    <definition name="app.news" extends="app.default">
+        <put-attribute name="content" value="/WEB-INF/tiles/news.jsp"/>
     </definition>
 
     <definition name="app.about" extends="app.default">

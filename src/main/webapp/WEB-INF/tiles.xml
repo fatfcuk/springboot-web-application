@@ -10,6 +10,11 @@
         <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"/>
     </definition>
 
+    <definition name="app.defaultform" template="/WEB-INF/layouts/defaultform.jsp">
+        <put-attribute name="title" value="Java and testing tutorials."/>
+        <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"/>
+    </definition>
+
     <definition name="app.blog" extends="app.default">
         <put-attribute name="content" value="/WEB-INF/tiles/blog.jsp"/>
     </definition>
@@ -29,7 +34,16 @@
     <definition name="app.forum" extends="app.default">
         <put-attribute name="content" value="/WEB-INF/tiles/forum.jsp"/>
     </definition>
+
     <definition name="app.tutorials" extends="app.default">
         <put-attribute name="content" value="/WEB-INF/tiles/tutorials.jsp"/>
+    </definition>
+
+    <!--USER INTERFACE TILES
+    login/register/remind
+    -->
+
+    <definition name="app.login" extends="app.default">
+        <put-attribute name="form" value="/WEB-INF/tiles/login.jsp"/>
     </definition>
 </tiles-definitions>

@@ -85,27 +85,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Programming website.</h1>
-                    <hr class="small">
-                    <span class="subheading">Check Java tutorials, testing guides, alghoritms and datastructures.</span>
-                </div>
+               <tiles:insertAttribute name="form"/>
             </div>
         </div>
     </div>
 </header>
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <tiles:insertAttribute name="content"/>
-        </div>
-    </div>
-</div>
-
 <tiles:insertAttribute name="footer"/>
-
 <!-- jQuery -->
 <script src="res/vendor/jquery/jquery.min.js"></script>
 

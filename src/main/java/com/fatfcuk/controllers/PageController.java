@@ -12,6 +12,35 @@ public class PageController {
 
     @RequestMapping("/")
     String home() {
-        return "app.homepage";
+        return "app.home";
     }
+
+    @RequestMapping("/tutorials")
+    String tutorials() {
+        return "app.tutorials";
+    }
+
+    @RequestMapping("/board")
+    String board() {
+        return "app.board";
+    }
+
+    @RequestMapping("/contact")
+    String contact() {
+        return "app.contact";
+    }
+
+    @RequestMapping("/about")
+    String about() {
+        return "app.about";
+    }
+
+    @RequestMapping("/login")
+    String login() {
+        return "app.login";
+    }
+
+
+
+
 }

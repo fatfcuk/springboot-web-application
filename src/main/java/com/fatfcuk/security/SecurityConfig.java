@@ -1,6 +1,8 @@
 package com.fatfcuk.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -19,26 +21,39 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(
                         "/"
-                        , "/forum"
-                        , "/tutorials"
+                        , "/fresh"
+                        , "/hot"
                         , "/about"
                         , "/contact"
                         , "/login"
                 )
                 .permitAll()
                 .antMatchers(
-                        "/res/**"
+                        "/resources/**"
 
                 )
                 .permitAll()
                 .anyRequest()
                 .authenticated()
-        .and()
-            .formLogin()
-            .loginPage("/login")
-            .defaultSuccessUrl("/")
-        .permitAll()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/")
+                .permitAll()
+                .and()
+                .logout()
+                .permitAll();
 
-        ;
+    }
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+
+        auth.inMemoryAuthentication()
+                .withUser("root")
+                .password("root")
+                .roles("USER");
+
+
     }
 }

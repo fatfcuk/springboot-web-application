@@ -11,6 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StaticPagesController {
 
 
+    @RequestMapping("/")
+    String hot() {
+        return "app.hot";
+    }
+
+    @RequestMapping("/fresh")
+    String fresh() {
+        return "app.fresh";
+    }
+
 
     @RequestMapping("/about")
     String about() {
